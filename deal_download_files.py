@@ -8,7 +8,7 @@ for dirpath, dirnames, filenames in os.walk("downloads"):
     os.chdir(dirpath)
     for filename in filenames:
         # 压缩文件
-        cmd = 'rar a -v1.5g -sm5 -df "{rarfile}" "{sourcefile}"'.format(
+        cmd = 'rar a -sm5 -df "{rarfile}" "{sourcefile}"'.format(
             rarfile=path.join('../result', filename + '.rar'),
             sourcefile=filename
         )
